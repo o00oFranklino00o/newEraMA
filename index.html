@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="finalProject.css">
+
+	<style type="text/css">
+		body{
+			background: black;
+		}
+
+
+		#homeSlideshowContainer{
+			width: 100%;
+
+
+		}
+		.slidesContainer{
+    		display: inline-block;
+   			width:100%;
+			/*height:910px; covers whole screenwidth*/
+ 			margin-right:-45px;/*allows vert nav bar overlap*/
+ 			padding-top: -200px;
+
+		}
+		.homeSlides{
+			/*width:100%;*/
+			/*height:910px; covers whole screenwidth*/
+			margin-bottom: -100px;/* allows overlapping of slide caption*/
+			/*margin-right: -100px;*/
+			animation: fadeinout 5s linear forwards;
+			/*margin-right: -100px;*/
+		}
+
+		@media screen and (min-width: 480px) {
+    .homeSlides{
+        /*background-color: lightgreen;*/
+        
+    }
+}
+
+
+		.slideCaption{
+			background: rgba(1,1,1,0.05);
+			font-size: 60px;
+			color: white;
+			position: absolute;/* allows overlapping of slide caption*/
+			width: 97%;
+			text-align: left;
+			padding-left: 50px;
+			font-family:Alierons;
+			animation: fadeinout 6s linear forwards;
+
+		}
+		.slideCaption a{
+			text-decoration: none;
+			color: white;
+		}
+
+
+		 @keyframes fadeinout {
+  			0%,100% { opacity: 0; }
+  			50% { opacity: 1; }
+		 }
+
+		@font-face {
+    		font-family: Aran;
+    		src: url(Aran.woff) format("opentype");
+
+			font-family: Alierons;
+    		src: url("Ailerons.otf") format("opentype");
+    	}
+
+    .ul{
+    	    margin-top: 115px;
+    }
+    	.ul li a {
+            color: white; /* overides external css defined color*/
+
+           z-index: 5;
+
+        }
+
+
+	</style>
+
+
+
+</head>
+<body>
+
+	<div id="LOGo">
+        <p> <span id= "logo1"> NEW ERA</span><br><span id="logo2">  Martial Arts + Fitness</span></p>
+    </div>
+
+
+
+
+				<div class="slidesContainer">
+					<div>
+						<img src='img/class.jpg' class='homeSlides' alt='image not found'>
+						<div class="slideCaption">
+						<a  href="#box3">Group Self-defense</a>
+						</div>
+					</div>
+
+					<div>
+						<img src='img/womensClass.jpg' class='homeSlides' alt='image not found'>
+						<div class="slideCaption">
+							<a href="#box3">Women's Self-Defense</a>
+						</div>
+					</div>
+					<div>
+						<img src='img/kidsClass.jpg' class='homeSlides' alt='image not found'>
+						<div class="slideCaption">
+						<a  href="#box3">Kid's TaeKwonDo</a>
+						</div>
+					</div>
+					<div>
+						<img src='img/kickBoxingClass.jpg' class='homeSlides' alt='image not found'>
+						<div class="slideCaption">
+							<a href="#box3">Kick-Boxing</a>
+						</div>
+					</div>
+					<div>
+						<img src='img/gym.jpg' class='homeSlides' alt='image not found'>
+						<div class="slideCaption">
+							<a href="#box3">Strength Conditioning</a>
+						</div>
+					</div>
+					<div>
+						<img src='img/cardio1.jpg' class='homeSlides' alt='image not found'>
+						<div class="slideCaption">
+							<a href="#box3">Endurance Training</a>
+						</div>
+					</div>
+					<div>
+						<img src='img/zumba.jpg' class='homeSlides' alt='image not found'>
+						<div class="slideCaption">
+							<a href="#box3">Zumba Fitness</a>
+						</div>
+					</div>
+					<div>
+						<img src='img/salsa.jpg' class='homeSlides' alt='image not found'>
+						<div class="slideCaption">
+							<a href="#box3">Latin Dance</a>
+						</div>
+					</div>
+
+				</div>
+
+
+
+
+
+
+	</div>
+
+<div id="nav">
+<ul class="ul"; >
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="bookClass.html">Classes</a></li>
+                        <li><a href="instructors3.html">Instructors</a></li>
+                        <li><a href="apparelaFinal3.html">Apparel</a></li>
+                        <li><a href="profile3.html">profile 2.0</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+
+</ul>
+</div>
+</body>
+
+<script>
+
+	var slideIndex=0;
+	slideShowMethod();
+	function slideShowMethod() {
+		var i=0;
+		var slidesMagazine=document.getElementsByClassName("homeSlides");
+		var slidesCaption=document.getElementsByClassName("slideCaption");
+
+
+		while (i< slidesMagazine.length){
+			slidesMagazine[i].style.display = "none";
+			slidesCaption[i].style.display = "none";
+			i++;
+		}
+		slideIndex++;
+		if (slideIndex>slidesMagazine.length){slideIndex=1;} //loops back to images
+		slidesMagazine[slideIndex-1].style.display="block";
+		slidesCaption[slideIndex-1].style.display="block";
+		setTimeout(slideShowMethod,5000);
+	}
+</script>
+
+</html>
