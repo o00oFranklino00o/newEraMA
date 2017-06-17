@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Store</title>
+<link rel="stylesheet" type="text/css" href="finalProject.css">
+  <style type="text/css">
+    body{
+      background: white;
+    }
+
+    #homeSlideshowContainer{
+      width: 97%;
+      height:910px;
+      display: inline-block;
+    }
+    .container {
+      width: 210px;
+      height: 140px;
+      position: relative;
+      margin: 0 auto 40px;
+    }
+
+    #displayWheel {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+
+              transform: translateZ( -288px );
+
+              transform-style: preserve-3d;
+
+              transition: transform 1s;
+    }
+
+    #displayWheel imageDisplay {
+      display: block;
+      position: absolute;
+      width: 286px;
+      height: 216px;
+      left: 12px;
+      top: 10px;
+
+      line-height: 216px;
+      background: white;/* slide diplay color*/
+      text-align: center;
+    }
+
+
+    #one {
+
+           transform: rotateY(   0deg ) translateZ( 400px );
+    }
+    #two {
+
+              transform: rotateY(  60deg ) translateZ( 400px );
+    }
+    #three {
+
+              transform: rotateY(  120deg ) translateZ( 400px );
+    }
+    #four {
+
+              transform: rotateY( 180deg ) translateZ( 400px );
+    }
+    #five  {
+
+              transform: rotateY( 240deg ) translateZ( 400px );
+    }
+    #six  {
+
+              transform: rotateY( 300deg ) translateZ( 400px );
+    }
+    #seven  {
+
+              transform: rotateY( 360deg ) translateZ( 400px );
+    }
+    /*#eight {
+                 transform: rotateY( 280deg ) translateZ( 346px );
+    }
+    #nine {
+
+              transform: rotateY( 320deg ) translateZ( 346px );
+    }*/
+
+
+      .homeSlides{
+        height: 100px;
+        width: 100px;
+
+      }
+
+
+      .imageDisplay {
+  margin: 0;
+}
+
+
+
+
+/*modal*/
+
+ /* below code for modal*/
+      .modal{
+      position: fixed;
+      font-family: Impact;
+      height: 600px;
+      width: 400px;
+      background: rgba(0,0,0,0.8);
+      z-index: 99999;
+      opacity:0;
+      pointer-events: none;
+      left: 50%;
+      top: 35%;
+      padding-left: 40px;
+      margin-left: -220px;
+      margin-top: -150px;
+      }
+      /*
+      .modal {
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -150px;
+      margin-top: -150px;
+      }*/
+      .modal:target {
+      opacity:1;
+      pointer-events: auto;
+      }
+      .modal> div {
+      transition: all .2s ease-in-out;
+      width: 400px;
+      position: relative;
+      margin: 10% auto;
+      border-radius: 10px;
+      }
+
+
+/*modal*/
+
+  </style>
+
+
+
+</head>
+<body>
+
+  <div id="LOGo">
+        <p> <span id= "logo1"> NEW ERA</span><br><span id="logo2">  Martial Arts + Fitness</span></p>
+    </div>
+    
+<div style="height:115px; width: 30px; "></div>
+
+
+<div id="nav">
+<ul class="ul"; >
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="bookClass.html">Classes</a></li>
+                        <li><a href="instructors3.html">Instructors</a></li>
+                        <li><a href="apparelaFinal3.html">Apparel</a></li>
+                        <li><a href="profile3.html">profile 2.0</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+
+</ul>
+</div>
+  
+<div style="height:115px; width: 30px; background: grey;"></div>
+
+      <div id="homeSlideshowContainer">
+          <section class="container">
+              <div id="displayWheel">
+
+
+
+<a href="#openModal"  onclick=" linkToModal('img/uniformWhite.jpg')"> 
+                  <imageDisplay id="one">
+                  <img  src='img/uniformWhite.jpg' class='homeSlides' alt='image not found'></imageDisplay>
+</a>
+
+
+
+<a  href="#openModal"  onclick=" linkToModal('img/uniformBlack.jpg')"> 
+                  <imageDisplay id="two"  onclick=" linkToModal('uniformWhite.jpg')" >
+                  <img src='img/uniformBlack.jpg' class='homeSlides' alt='image not found'></imageDisplay>
+</a> 
+
+<a href="#openModal"  onclick=" linkToModal('img/uniformBlack2.jpg')"> 
+                  <imageDisplay id="three"  onclick=" linkToModal('uniformWhite.jpg')" >
+                  <img src='img/uniformBlack2.jpg' class='homeSlides' alt='image not found'></imageDisplay>
+</a> 
+<a  href="#openModal"  onclick=" linkToModal('img/uniformPink.jpg')"> 
+                  <imageDisplay id="four"  onclick=" linkToModal('uniformPink.jpg')" >
+                  <img src='img/uniformPink.jpg' class='homeSlides' alt='image not found'></imageDisplay>
+</a> 
+
+<a  href="#openModal"  onclick=" linkToModal('img/uniformPink.jpg')"> 
+                  <imageDisplay id="four"  onclick=" linkToModal('bag.jpg')" >
+                  <img src='img/uniformPink.jpg' class='homeSlides' alt='image not found'></imageDisplay>
+</a> 
+
+<a  href="#openModal"  onclick=" linkToModal('img/uniformPink.jpg')"> 
+                  <imageDisplay id="four"  onclick=" linkToModal('bag.jpg')" >
+                  <img src='img/uniformPink.jpg' class='homeSlides' alt='image not found'></imageDisplay>
+</a> 
+
+<a  href="#openModal"  onclick=" linkToModal('img/uniformPink.jpg')"> 
+                  <imageDisplay id="four"  onclick=" linkToModal('bag.jpg')" >
+                  <img src='img/uniformPink.jpg' class='homeSlides' alt='image not found'></imageDisplay>
+</a> 
+
+                  
+                
+                      
+              </div>
+            </section>
+
+      <button id="previous"  onclick='moVe(-1);'>Previous</button>
+      <button id="next" onclick='moVe(1);'>Next</button>
+
+
+
+
+      </div>
+      
+
+  
+  
+
+  </div>
+
+
+  <div id="openModal"  class="modal">     
+    <img  id="modale" src='#' style="height: 550px; width: 450px; ">
+               <a type="button" class="exit-button" 
+               onClick="history.go(-1);return true;
+               resetModal();
+               "><img 
+               src="img/close.png" height="42" width="42"></a>
+  </div>
+
+
+
+
+
+  <script>
+
+
+function linkToModal(imageName){
+
+  document.getElementById("modale").src = imageName;
+}
+
+function resetModal(){
+  document.getElementById("link").href = "#";
+  document.getElementById("modale").src = "#";
+}
+
+
+      var displayWheel = document.getElementById('displayWheel'),
+          count = displayWheel.children.length,
+            turnAngle= 0;
+          function moVe(increment){
+            turnAngle+= ( 360 / count ) * increment * -1;
+            displayWheel.style.transform= 'translateZ( -288px ) rotateY(' + turnAngle + 'deg)';
+          }
+    </script>
+
+</body>
+
+</html>

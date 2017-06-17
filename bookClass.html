@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="finalProject.css">
+      <title>bookClass</title>
+      <style type="text/css">
+         * {
+         box-sizing:border-box;
+         }
+         ul {list-style-type: none;}
+         body {font-family: Aran,sans-serif;}
+         /* */
+         /*  */
+
+
+         .month {
+         padding: 70px 25px;
+         width: 100%;
+         background: ghostwhite;
+         border-radius: 115px;
+         }
+         .month ul {
+         margin: 0;
+         padding: 0;
+         }
+         .month ul li {
+         color: black;
+         font-size: 20px;
+         text-transform: uppercase;
+         letter-spacing: 3px;
+         }
+          .calendar{
+         width: 95%;
+
+      /* background: none; */
+         margin-left: 18px;
+         box-shadow: 0 0 20px #878787;/* shadow on calendar*/
+         }
+         .weekdays {
+         margin: 0;
+         padding: 10px 0;
+         background-color: #ddd;
+         }
+         .weekdays li {
+         display: inline-block;
+         width: 13.6%;
+         color: black;
+         text-align: center;
+         }
+         #days {
+         padding: 10px 0;
+         background: #eee;
+         margin: 0;
+         }
+         #days li {
+         list-style-type: none;
+         display: inline-block;
+         width: 13.6%;
+         text-align: center;
+         margin-bottom: 5px;
+         font-size:12px;
+         color: white;
+         }
+
+         li { transition: all .6s ease-in-out;}
+
+         .weekdays li:hover, #days li:hover {.    /* on hover, cell lights up*/
+         background: red;
+         color:red;
+         cursor: pointer;
+         { transform: scale(1.3); }
+         }
+
+
+
+
+
+
+      </style>
+   </head>
+   <body onload="setCalendar();">
+      <div id="LOGo">
+         <p> <span id= "logo1"> NEW ERA</span><br><span id="logo2">  Martial Arts + Fitness</span></p>
+      </div>
+      <div style="height:115px; width: 30px;"></div>
+      <div id="nav">
+         <ul class="ul"; >
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bookClass.html">Classes</a></li>
+            <li><a href="instructors3.html">Instructors</a></li>
+            <li><a href="apparelaFinal3.html">Apparel</a></li>
+            <li><a href="profile3.html">profile 2.0</a></li>
+            <li><a href="contact.html">Contact</a></li>
+         </ul>
+      </div>
+      <div class= calendar>
+         <!--Open calendar-->
+         <div class="month">
+
+            <ul>
+
+               <li id="monthDisplay" style="text-align:center">
+                  CurrentMonth
+               </li>
+               <li id="yearDisplay"  style="font-size:18px;text-align:center;"> CurrentYear </li>
+            </ul>
+         </div>
+         <ul class="weekdays">
+            <li id ="Sunday">Sun</li>
+            <li id ="Monday">Mon</li>
+            <li id ="Tuesday">Tues</li>
+            <li id ="Wednesday">Wed</li>
+            <li id ="Thursday">Thurs</li>
+            <li id ="Friday">Fri</li>
+            <li id ="Saturday">Sat</li>
+         </ul>
+         <ul id="days">
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+         </ul>
+      </div>
+      <!--close calendar-->
+      <script>
+         var d = new Date();
+         var year= d.getFullYear();
+         var month=d.getMonth();
+         var day= d.getDay();
+         var date= d.getDate();
+
+
+
+         var firstDay = new Date(d.getFullYear(), d.getMonth(), 1);
+         var LastDay = new Date(d.getFullYear(),d.getMonth() + 1, 0);
+         var offsetDate=  firstDay.getDay()-1; //date align
+         var monthEnd= LastDay.getDate();
+
+
+
+         function setCalendar(){
+             populateCalendar();
+              setCalendarDay();
+              setCalendarMonth();
+              setCalendarYear();
+
+         }
+
+
+         function setCalendarDay(){
+             var CurrentDay;
+
+         switch (new Date().getDay()) {
+             case 0:
+                 CurrentDay = "Sunday";
+                 break;
+             case 1:
+                 CurrentDay = "Monday";
+                 break;
+             case 2:
+                 CurrentDay = "Tuesday";
+                 break;
+             case 3:
+                 CurrentDay = "Wednesday";
+                 break;
+             case 4:
+                 CurrentDay = "Thursday";
+                 break;
+             case 5:
+                 CurrentDay = "Friday";
+                 break;
+             case  6:
+                 CurrentDay = "Saturday";
+         }
+         document.getElementById(CurrentDay).innerHTML = CurrentDay;
+         document.getElementById(CurrentDay).style.backgroundColor = "yellow";
+
+         }
+
+         function setCalendarMonth(){
+         var curentMonth;
+             switch (new Date().getMonth()) {
+             case 0:
+                 CurrentMonth = "January";
+                 break;
+             case 1:
+                 CurrentMonth = "February";
+                 break;
+             case 2:
+                 CurrentMonth = "March";
+                 break;
+             case 3:
+                 CurrentMonth = "April";
+                 break;
+             case 4:
+                 CurrentMonth = "May";
+                 break;
+             case 5:
+                 CurrentMonth = "June";
+                 break;
+             case  7:
+                 CurrentMonth = "July";
+             case  8:
+                 CurrentMonth = "August";
+             case  9:
+                 CurrentMonth = "Sept";
+             case  10:
+                 CurrentMonth = "Oct";
+             case  11:
+                 CurrentMonth = "Nov";
+             case  12:
+                 CurrentMonth = "Dec";
+         }
+         document.getElementById("monthDisplay").innerHTML = CurrentMonth;
+         }
+
+         function setCalendarYear(){
+              document.getElementById("yearDisplay").innerHTML =d.getFullYear();
+          }
+
+
+          function populateCalendar(){
+            for (var i=1; i<=monthEnd; i++){
+                var child = document.getElementById("days").children[i+offsetDate];
+                child.innerHTML = "<a href='#' id='calCell"+i+"' style=' text-decoration: none;'>" +i +"</a>";
+
+                document.getElementById("calCell"+i).href="scheduleClass.html";
+
+             }
+
+        var markToday = document.getElementById("days").children[date+offsetDate];
+        markToday.style.backgroundColor = "yellow";
+
+         }
+      </script>
+   </body>
+</html>
