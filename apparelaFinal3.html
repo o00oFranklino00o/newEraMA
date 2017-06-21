@@ -205,7 +205,7 @@
                   <img src='img/uniformPink.jpg' class='homeSlides' alt='image not found'></imageDisplay>
 </a> 
 
-<a  href="#openModal"  onclick=" linkToModal('img/uniformPink.jpg')"> 
+<a  href="#openModal"  onclick=" linkToModal('img/uniformWhite.jpg')"> 
                   <imageDisplay id="four"  onclick=" linkToModal('bag.jpg')" >
                   <img src='img/uniformPink.jpg' class='homeSlides' alt='image not found'></imageDisplay>
 </a> 
@@ -261,10 +261,17 @@ function resetModal(){
       var displayWheel = document.getElementById('displayWheel'),
           count = displayWheel.children.length,
             turnAngle= 0;
+             var zVal = Math.round( ( 100 / 2 ) / Math.tan( Math.PI / count ) );
+
           function moVe(increment){
             turnAngle+= ( 360 / count ) * increment * -1;
-            displayWheel.style.transform= 'translateZ( -288px ) rotateY(' + turnAngle + 'deg)';
+            displayWheel.style.transform= 'translateZ(-'+zVal + 'px ) rotateY(' + turnAngle + 'deg)';
           }
+
+
+
+          
+
     </script>
 
 </body>
