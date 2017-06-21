@@ -178,8 +178,8 @@
          }
 
 
-         function setCalendarDay(){
-             var CurrentDay;
+       function setCalendarDay(){
+         var CurrentDay;
 
          switch (new Date().getDay()) {
              case 0:
@@ -206,7 +206,7 @@
          document.getElementById(CurrentDay).innerHTML = CurrentDay;
          document.getElementById(CurrentDay).style.backgroundColor = "yellow";
 
-         }
+      }
 
          function setCalendarMonth(){
          var curentMonth;
@@ -231,16 +231,22 @@
                  break;
              case  7:
                  CurrentMonth = "July";
+                  break;
              case  8:
                  CurrentMonth = "August";
+                  break;
              case  9:
                  CurrentMonth = "Sept";
+                  break;
              case  10:
                  CurrentMonth = "Oct";
+                   break;
              case  11:
                  CurrentMonth = "Nov";
+                    break;
              case  12:
                  CurrentMonth = "Dec";
+                    break;
          }
          document.getElementById("monthDisplay").innerHTML = CurrentMonth;
          }
@@ -254,9 +260,7 @@
             for (var i=1; i<=monthEnd; i++){
                 var child = document.getElementById("days").children[i+offsetDate];
                 child.innerHTML = "<a href='#' id='calCell"+i+"' style=' text-decoration: none;'>" +i +"</a>";
-
                 document.getElementById("calCell"+i).href="scheduleClass.html";
-
              }
 
         var markToday = document.getElementById("days").children[date+offsetDate];
