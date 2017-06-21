@@ -80,6 +80,8 @@
       .homeSlides{
         height: 100px;
         width: 100px;
+      margin: 0 auto;
+    padding-top: 80px;
 
       }
 
@@ -97,28 +99,19 @@
       .modal{
       position: fixed;
       font-family: Impact;
-      height: 600px;
-      width: 400px;
+      height: 100%;
+      width: 100%;
       background: rgba(0,0,0,0.8);
       z-index: 99999;
       opacity:0;
       pointer-events: none;
-      left: 50%;
-      top: 35%;
-      padding-left: 40px;
-      margin-left: -220px;
-      margin-top: -150px;
+      top: 0%;
+   
+
+
+
       }
-      /*
-      .modal {
-      width: 300px;
-      height: 300px;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      margin-left: -150px;
-      margin-top: -150px;
-      }*/
+   
       .modal:target {
       opacity:1;
       pointer-events: auto;
@@ -127,8 +120,9 @@
       transition: all .2s ease-in-out;
       width: 400px;
       position: relative;
-      margin: 10% auto;
+      margin: 0 auto;
       border-radius: 10px;
+      display: block;
       }
 
 
@@ -194,9 +188,9 @@
                   <img src='img/bag.jpg' class='homeSlides' alt='image not found'></imageDisplay>
 </a> 
 
-<a  href="#openModal"  onclick=" linkToModal('img/ufc.jpg')"> 
+<a  href="#openModal"  onclick=" linkToModal('img/ufc.jpeg')"> 
                   <imageDisplay id="six"  onclick=" linkToModal('bag.jpg')" >
-                  <img src='img/ufc.jpg' class='homeSlides' alt='image not found'></imageDisplay>
+                  <img src='img/ufc.jpeg' class='homeSlides' alt='image not found'></imageDisplay>
 </a> 
 
 <a  href="#openModal"  onclick=" linkToModal('img/ufc2.jpg')"> 
